@@ -1,9 +1,12 @@
-package com.egorbarinov.clientserver.demoapp.repository;
+package com.egorbarinov.demoapp.repository;
 
-import com.egorbarinov.clientserver.demoapp.entity.Person;
+import com.egorbarinov.demoapp.entity.Person;
 import org.springframework.stereotype.Repository;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Repository
 public class PersonRepository {

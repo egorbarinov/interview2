@@ -1,4 +1,4 @@
-package com.egorbarinov.clientserver.demoapp.entity;
+package com.egorbarinov.demoapp.entity;
 public class Person {
 
     private int id;
