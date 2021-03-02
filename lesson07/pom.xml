@@ -11,8 +11,6 @@
 
     <artifactId>lesson07</artifactId>
 
-<<<<<<< HEAD
-=======
     <dependencies>
 
         <dependency>
@@ -51,7 +49,6 @@
 
     </dependencies>
 
->>>>>>> lesson07
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>

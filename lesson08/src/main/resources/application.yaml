@@ -1,0 +1,46 @@
+#server:
+#  port: 8189
+#  servlet:
+#    context-path: /security
+#spring:
+#  jpa:
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: validate
+#      dialect: org.hibernate.dialect.PostgreSQL95Dialect
+#      temp:
+#        use_jdbc_metadata_defaults: false
+#      id:
+#        new_generator_mappings: false
+#
+#
+#      datasource:
+#        driver-class-name: org.postgresql.Driver
+#        url: ${JDBC_DATABASE_URL:jdbc:postgresql://localhost:5432/postgres?currentSchema=sec}
+#        username: ${JDBC_DATABASE_USERNAME:postgres}
+#        password: ${JDBC_DATABASE_PASSWORD:password}
+#
+#        flyway:
+#        baseline-on-migrate: true
+
+
+server:
+  port: 8189
+  servlet:
+    context-path: /security
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        ddl-auto: validate
+        dialect: org.hibernate.dialect.PostgreSQL95Dialect
+        temp:
+          use_jdbc_metadata_defaults: false
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=sec
+    username: postgres
+    password: password
+    flyway:
+      baseline-on-migrate: true
