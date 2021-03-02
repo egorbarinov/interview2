@@ -1,7 +1,7 @@
-package com.egorbarinov.demoapp;
+package com.egorbarinov.hibernateapp;
 
 
-import com.egorbarinov.demoapp.repository.PersonRepository;
+import com.egorbarinov.hibernateapp.repository.Bootstrap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,7 +15,6 @@ public class DemoAppApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		PersonRepository.initDataBase();
+		Bootstrap.bootstrapPrepare();
 	}
 }
-

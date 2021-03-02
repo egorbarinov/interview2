@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="utf-8"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+
+<div th:fragment="navigation(activeTab)">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+        <!--        <div class="collapse navbar-collapse" id="navbarNav">-->
+        <ul class="navbar-nav">
+            <li class="nav-item" th:classappend="${activeTab == 'Hello' ? 'active' : ''}">
+                <a class="nav-link" th:href="@{/hello}">Hello</a>
+            </li>
+            <li class="nav-item" th:classappend="${activeTab == 'Аутентификация' ? 'active' : ''}" sec:authorize="isAuthenticated()">
+                <a class="nav-link" th:href="@{/authenticated}">Аутентификация</a>
+            </li>
+            <li class="nav-item" th:classappend="${activeTab == 'Обмен' ? 'active' : ''}" sec:authorize="isAuthenticated()">
+                <a class="nav-link" th:href="@{/resource-sharing}">Общий ресурс</a>
+            </li>
+
+            <li class="nav-item" th:classappend="${activeTab == 'Admin' ? 'active' : ''}" sec:authorize="hasAnyAuthority('ADMIN')">
+                <a class="nav-link" th:href="@{/admin}">Для администраторов</a>
+            </li>
+
+            <li class="nav-item" sec:authorize="isAnonymous()">
+                <a class="nav-link btn btn-success" th:href="@{/login}">Authorization</a>
+            </li>
+
+            <li class="nav-item" sec:authorize="isAuthenticated()">
+                <form th:action="@{/logout}" method="POST">
+                    <input type="submit" class="btn btn-danger" value="Logout" />
+                </form>
+            </li>
+        </ul>
+        <!--        </div>-->
+    </nav>
+</div>
