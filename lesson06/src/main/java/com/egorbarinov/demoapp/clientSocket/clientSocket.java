@@ -1,10 +1,10 @@
-package com.egorbarinov.clientserver.demoapp.clientSocket;
+package com.egorbarinov.demoapp.clientSocket;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 import java.util.Objects;

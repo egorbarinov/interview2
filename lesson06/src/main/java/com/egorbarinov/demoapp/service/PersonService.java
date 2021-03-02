@@ -1,10 +1,11 @@
-package com.egorbarinov.clientserver.demoapp.service;
+package com.egorbarinov.demoapp.service;
 
 
-import com.egorbarinov.clientserver.demoapp.entity.Person;
-import com.egorbarinov.clientserver.demoapp.repository.PersonRepository;
+import com.egorbarinov.demoapp.entity.Person;
+import com.egorbarinov.demoapp.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 
 import java.util.List;
 

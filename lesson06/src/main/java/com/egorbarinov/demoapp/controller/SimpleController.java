@@ -1,11 +1,12 @@
-package com.egorbarinov.clientserver.demoapp.controller;
+package com.egorbarinov.demoapp.controller;
 
-import com.egorbarinov.clientserver.demoapp.entity.Person;
-import com.egorbarinov.clientserver.demoapp.service.PersonService;
-import org.springframework.beans.factory.annotation.Autowired;
+
+
+import com.egorbarinov.demoapp.entity.Person;
+import com.egorbarinov.demoapp.service.PersonService;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 
 import java.util.List;
 

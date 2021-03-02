@@ -1,6 +1,7 @@
-package com.egorbarinov.clientserver.demoapp;
+package com.egorbarinov.demoapp;
 
-import com.egorbarinov.clientserver.demoapp.repository.PersonRepository;
+
+import com.egorbarinov.demoapp.repository.PersonRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
