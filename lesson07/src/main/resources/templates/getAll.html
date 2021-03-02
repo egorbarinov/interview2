@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+
+    <title>Регистрация</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<h2>Персоны</h2>
+
+<form action="#" th:action="@{/findAll}" method="get">
+
+    <div class="form-row text-center">
+        <div class="col-12">
+            <button type="submit" class="btn btn-secondary">Отобразить все персоны</button>
+        </div>
+    </div>
+</form>
+
+<form action="#" th:action="@{/findAll}" method="post" th:object="${persons}">
+    <table class="table table-hover">
+        <thead class="head-dark">
+        <tr>
+            <td>Name</td>
+            <td>Age</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="person : ${persons}">
+            <td th:utext="${person.id}"/>
+            <td th:utext="${person.name}"/>
+            <td th:utext="${person.age}"/>
+        </tr>
+        </tbody>
+    </table>
+</form>
+
+</body>
+</html>
