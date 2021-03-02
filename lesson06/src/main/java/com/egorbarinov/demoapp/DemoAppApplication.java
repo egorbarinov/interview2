@@ -18,3 +18,4 @@ public class DemoAppApplication implements CommandLineRunner {
 		PersonRepository.initDataBase();
 	}
 }
+
